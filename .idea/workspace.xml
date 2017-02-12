@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df730805-3add-455c-bea7-d26561db7676" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/stainedGlass.js" afterPath="$PROJECT_DIR$/js/stainedGlass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/three.min.js" afterPath="$PROJECT_DIR$/js/three.min.js" />
     </list>
     <ignored path="stained-glass.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +32,18 @@
       <file leaf-file-name="stainedGlass.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/stainedGlass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
-              <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="three.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/three.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1222">
+              <caret line="860" column="249" lean-forward="false" selection-start-line="860" selection-start-column="249" selection-end-line="860" selection-end-column="249" />
               <folding />
             </state>
           </provider>
@@ -41,8 +52,8 @@
       <file leaf-file-name="stainedGlass.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stainedGlass.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="912">
+              <caret line="19" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -67,6 +78,7 @@
         <option value="$PROJECT_DIR$/stained-glass.html" />
         <option value="$PROJECT_DIR$/stainedGlass.html" />
         <option value="$PROJECT_DIR$/js/stainedGlass.js" />
+        <option value="$PROJECT_DIR$/js/three.min.js" />
       </list>
     </option>
   </component>
@@ -239,7 +251,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14171000" />
+    <option name="totallyTimeSpent" value="14320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -305,18 +317,65 @@
     <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
     <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
     <entry file="file://$PROJECT_DIR$/stained-glass.html" />
+    <entry file="file://$PROJECT_DIR$/js/stainedGlass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="737">
+          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/stainedGlass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="14" column="46" lean-forward="false" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        <state relative-caret-position="48">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stainedGlass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
+    <entry file="file://$PROJECT_DIR$/stained-glass.html" />
+    <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
+    <entry file="file://$PROJECT_DIR$/stained-glass.html" />
+    <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
+    <entry file="file://$PROJECT_DIR$/js/stained-glass.js" />
+    <entry file="file://$PROJECT_DIR$/stained-glass.html" />
+    <entry file="file://$PROJECT_DIR$/stainedGlass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="860" column="249" lean-forward="false" selection-start-line="860" selection-start-column="249" selection-end-line="860" selection-end-column="249" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/stainedGlass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

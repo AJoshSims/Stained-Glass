@@ -17,18 +17,22 @@ document.body.appendChild( renderer.domElement );
 
 var windowFrame = new THREE.Shape();
 
-windowFrame.moveTo(25, 25);
-windowFrame.lineTo(300, 25);
-windowFrame.lineTo(300, 400);
-windowFrame.lineTo(25, 400);
-windowFrame.lineTo(25, 25);
+windowFrame.moveTo(-canvasWidth, canvasHeight);
+windowFrame.lineTo(-canvasWidth, -canvasHeight);
+windowFrame.lineTo(canvasWidth, -canvasHeight);
+windowFrame.lineTo(canvasWidth, canvasHeight);
+windowFrame.lineTo(-canvasWidth, canvasHeight);
 
 var hole = new THREE.Path();
-hole.absellipse(163, 213, 75, 125, Math.PI/4, Math.PI, false);
+hole.moveTo(-canvasWidth + 130, canvasHeight - 80);
+hole.lineTo(-canvasWidth + 130, -canvasHeight + 80);
+hole.lineTo(canvasWidth - 130, -canvasHeight + 80);
+hole.lineTo(canvasWidth - 130, canvasHeight - 80);
+hole.lineTo(-canvasWidth + 130, canvasHeight - 80);
 windowFrame.holes.push(hole);
 
 var windowFrameGeometry = new THREE.ShapeGeometry(windowFrame);
-var windowFramMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
+var windowFramMaterial = new THREE.MeshBasicMaterial({color: 0x663300});
 var windowFrameMesh = new THREE.Mesh(windowFrameGeometry, windowFramMaterial);
 
 scene.add(windowFrameMesh);

@@ -34,10 +34,10 @@ stainedGlassFrame.holes.push(hole);
 
 var stainedGlassFrameGeometry = new THREE.ShapeGeometry(stainedGlassFrame);
 var stainedGlassFrameMaterial = new THREE.MeshBasicMaterial({color: 0x663300});
-var windowFrameMesh =
+var stainedGlassFrameMesh =
 	new THREE.Mesh(stainedGlassFrameGeometry, stainedGlassFrameMaterial);
 
-scene.add(windowFrameMesh);
+scene.add(stainedGlassFrameMesh);
 
 
 // Shapes

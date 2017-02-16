@@ -122,8 +122,72 @@ var trianglePointyEastMesh =
 scene.add(trianglePointyEastMesh);
 
 // Northwest horn
-// TODO 
+var hornNorthwest = new THREE.Shape();
 
+hornNorthwest.moveTo(-120, 250);
+hornNorthwest.lineTo(-170, 50);
+hornNorthwest.lineTo(-120, 50);
+hornNorthwest.quadraticCurveTo(-170, 50, -120, 250);
+hornNorthwest.lineTo(-120, 250);
+
+var hornNorthwestGeometry = new THREE.ShapeGeometry(hornNorthwest);
+var hornNorthwestMaterial =
+	new THREE.MeshBasicMaterial({color: 0xaaf000});
+var hornNorthwestMesh =
+	new THREE.Mesh(hornNorthwestGeometry, hornNorthwestMaterial);
+
+scene.add(hornNorthwestMesh);
+
+// Southwest horn
+var hornSouthwest = new THREE.Shape();
+
+hornSouthwest.moveTo(-120, -250);
+hornSouthwest.lineTo(-170, -50);
+hornSouthwest.lineTo(-120, -50);
+hornSouthwest.quadraticCurveTo(-170, -50, -120, -250);
+hornSouthwest.lineTo(-120, -250);
+
+var hornSouthwestGeometry = new THREE.ShapeGeometry(hornSouthwest);
+var hornSouthwestMaterial =
+	new THREE.MeshBasicMaterial({color: 0xaaf000});
+var hornSouthwestMesh =
+	new THREE.Mesh(hornSouthwestGeometry, hornSouthwestMaterial);
+
+scene.add(hornSouthwestMesh);
+
+// Southeast horn
+var hornSoutheast = new THREE.Shape();
+
+hornSoutheast.moveTo(120, -250);
+hornSoutheast.lineTo(170, -50);
+hornSoutheast.lineTo(120, -50);
+hornSoutheast.quadraticCurveTo(170, -50, 120, -250);
+hornSoutheast.lineTo(120, -250);
+
+var hornSoutheastGeometry = new THREE.ShapeGeometry(hornSoutheast);
+var hornSoutheastMaterial =
+	new THREE.MeshBasicMaterial({color: 0xaaf000});
+var hornSoutheastMesh =
+	new THREE.Mesh(hornSoutheastGeometry, hornSoutheastMaterial);
+
+scene.add(hornSoutheastMesh);
+
+// Northeast horn
+var hornNortheast = new THREE.Shape();
+
+hornNortheast.moveTo(120, 250);
+hornNortheast.lineTo(170, 50);
+hornNortheast.lineTo(120, 50);
+hornNortheast.quadraticCurveTo(170, 50, 120, 250);
+hornNortheast.lineTo(120, 250);
+
+var hornNortheastGeometry = new THREE.ShapeGeometry(hornNortheast);
+var hornNortheastMaterial =
+	new THREE.MeshBasicMaterial({color: 0xaaf000});
+var hornNortheastMesh =
+	new THREE.Mesh(hornNortheastGeometry, hornNortheastMaterial);
+
+scene.add(hornNortheastMesh);
 
 // Render
 renderer.render(scene, camera);

@@ -44,6 +44,8 @@ scene.add(stainedGlassFrameMesh);
 
 
 // Shapes
+var shapes = [];
+
 // Center rectangle
 var rectangleCenter = new THREE.Shape();
 
@@ -59,6 +61,7 @@ var rectangleCenterMesh = new THREE.Mesh(
 	rectangleCenterGeometry, rectangleCenterMaterial);
 
 scene.add(rectangleCenterMesh);
+shapes.push(rectangleCenterMesh);
 
 // North pointy triangle
 var trianglePointyNorth = new THREE.Shape();
@@ -75,6 +78,7 @@ var trianglePointyNorthMesh = new THREE.Mesh(
 	trianglePointyNorthGeometry, trianglePointyNorthMaterial);
 
 scene.add(trianglePointyNorthMesh);
+shapes.push(trianglePointyNorthMesh);
 
 // West pointy triangle
 var trianglePointyWest = new THREE.Shape();
@@ -91,6 +95,7 @@ var trianglePointyWestMesh = new THREE.Mesh(
 	trianglePointyWestGeometry, trianglePointyWestMaterial);
 
 scene.add(trianglePointyWestMesh);
+shapes.push(trianglePointyWestMesh);
 
 // South pointy triangle
 var trianglePointySouth = new THREE.Shape();
@@ -107,6 +112,7 @@ var trianglePointySouthMesh = new THREE.Mesh(
 	trianglePointySouthGeometry, trianglePointySouthMaterial);
 
 scene.add(trianglePointySouthMesh);
+shapes.push(trianglePointySouthMesh);
 
 // East pointy triangle
 var trianglePointyEast = new THREE.Shape();
@@ -123,6 +129,7 @@ var trianglePointyEastMesh = new THREE.Mesh(
 	trianglePointyEastGeometry, trianglePointyEastMaterial);
 
 scene.add(trianglePointyEastMesh);
+shapes.push(trianglePointyEastMesh);
 
 // Northwest horn
 var hornNorthwest = new THREE.Shape();
@@ -140,6 +147,7 @@ var hornNorthwestMesh = new THREE.Mesh(
 	hornNorthwestGeometry, hornNorthwestMaterial);
 
 scene.add(hornNorthwestMesh);
+shapes.push(hornNorthwestMesh);
 
 // Southwest horn
 var hornSouthwest = new THREE.Shape();
@@ -157,6 +165,7 @@ var hornSouthwestMesh = new THREE.Mesh(
 	hornSouthwestGeometry, hornSouthwestMaterial);
 
 scene.add(hornSouthwestMesh);
+shapes.push(hornSouthwestMesh);
 
 // Southeast horn
 var hornSoutheast = new THREE.Shape();
@@ -174,6 +183,7 @@ var hornSoutheastMesh = new THREE.Mesh(
 	hornSoutheastGeometry, hornSoutheastMaterial);
 
 scene.add(hornSoutheastMesh);
+shapes.push(hornSoutheastMesh);
 
 // Northeast horn
 var hornNortheast = new THREE.Shape();
@@ -191,6 +201,7 @@ var hornNortheastMesh = new THREE.Mesh(
 	hornNortheastGeometry, hornNortheastMaterial);
 
 scene.add(hornNortheastMesh);
+shapes.push(hornNortheastMesh);
 
 // West Circle
 var circleWestRadius = 15;
@@ -204,6 +215,7 @@ circleWestMesh.position.x = -350;
 circleWestMesh.position.y = 0;
 
 scene.add(circleWestMesh);
+shapes.push(circleWestMesh);
 
 // East circle
 var circleEastRadius = 15;
@@ -217,6 +229,7 @@ circleEastMesh.position.x = 350;
 circleEastMesh.position.y = 0;
 
 scene.add(circleEastMesh);
+shapes.push(circleEastMesh);
 
 // Northwest rectangle
 var rectangleNorthwest = new THREE.Shape();
@@ -233,6 +246,7 @@ var rectangleNorthwestMesh = new THREE.Mesh(
 	rectangleNorthwestGeometry, rectangleNorthwestMaterial);
 
 scene.add(rectangleNorthwestMesh);
+shapes.push(rectangleNorthwestMesh);
 
 // Southwest rectangle
 var rectangleSouthwest = new THREE.Shape();
@@ -249,6 +263,7 @@ var rectangleSouthwestMesh = new THREE.Mesh(
 	rectangleSouthwestGeometry, rectangleSouthwestMaterial);
 
 scene.add(rectangleSouthwestMesh);
+shapes.push(rectangleSouthwestMesh);
 
 // Southeast rectangle
 var rectangleSoutheast = new THREE.Shape();
@@ -265,6 +280,7 @@ var rectangleSoutheastMesh = new THREE.Mesh(
 	rectangleSoutheastGeometry, rectangleSoutheastMaterial);
 
 scene.add(rectangleSoutheastMesh);
+shapes.push(rectangleSoutheastMesh);
 
 // Northeast rectangle
 var rectangleNortheast = new THREE.Shape();
@@ -281,9 +297,9 @@ var rectangleNortheastMesh = new THREE.Mesh(
 	rectangleNortheastGeometry, rectangleNortheastMaterial);
 
 scene.add(rectangleNortheastMesh);
+shapes.push(rectangleNortheastMesh);
 
 // Teeth
-var teethUpperMeshes = [];
 var tooth;
 var toothGeometry;
 var toothMaterial;
@@ -307,10 +323,9 @@ while (positionIncrement != 850)
 		toothGeometry, toothMaterial);
 
 	scene.add(toothMesh);
-	teethUpperMeshes.push(toothMesh);
+	shapes.push(toothMesh);
 }
 
-var teethLowerMeshes = [];
 positionIncrement = 0;
 while (positionIncrement != 850)
 {
@@ -330,8 +345,15 @@ while (positionIncrement != 850)
 		toothGeometry, toothMaterial);
 
 	scene.add(toothMesh);
-	teethLowerMeshes.push(toothMesh);
+	shapes.push(toothMesh);
 }
 
 // Render
 renderer.render(scene, camera);
+
+document.getElementById("slider1").addEventListener("change", onSlideChange);
+
+function onSlideChange()
+{
+	
+}

@@ -372,8 +372,5 @@ while (positionIncrement != 850)
 	scene.add(toothMesh);
 }
 
-// Blur
-
-
 // Render
 renderer.render(scene, camera);

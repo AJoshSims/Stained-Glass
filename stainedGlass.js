@@ -283,7 +283,12 @@ var rectangleNortheastMesh = new THREE.Mesh(
 scene.add(rectangleNortheastMesh);
 
 // Teeth
-positionIncrement = 0;
+var teethUpperMeshes = [];
+var tooth;
+var toothGeometry;
+var toothMaterial;
+var toothMesh;
+var positionIncrement = 0;
 while (positionIncrement != 850)
 {
 	tooth = new THREE.Shape();
@@ -302,8 +307,10 @@ while (positionIncrement != 850)
 		toothGeometry, toothMaterial);
 
 	scene.add(toothMesh);
+	teethUpperMeshes.push(toothMesh);
 }
 
+var teethLowerMeshes = [];
 positionIncrement = 0;
 while (positionIncrement != 850)
 {
@@ -323,6 +330,7 @@ while (positionIncrement != 850)
 		toothGeometry, toothMaterial);
 
 	scene.add(toothMesh);
+	teethLowerMeshes.push(toothMesh);
 }
 
 // Render

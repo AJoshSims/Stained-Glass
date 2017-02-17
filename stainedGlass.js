@@ -282,12 +282,55 @@ var rectangleNortheastMesh = new THREE.Mesh(
 
 scene.add(rectangleNortheastMesh);
 
-// Teeth
+// North teeth
 var tooth;
 var toothGeometry;
 var toothMaterial;
 var toothMesh;
 var positionIncrement = 0;
+while (positionIncrement != 850)
+{
+	tooth = new THREE.Shape();
+
+	tooth.moveTo(-400 + positionIncrement, 400);
+	tooth.lineTo(-410 + positionIncrement, 350);
+	tooth.lineTo(-390 + positionIncrement, 350);
+	tooth.lineTo(-400 + positionIncrement, 400);
+
+	positionIncrement = positionIncrement + 50;
+
+	toothGeometry = new THREE.ShapeGeometry(tooth);
+	toothMaterial = new THREE.MeshBasicMaterial(
+		{color: 0x641e16});
+	toothMesh = new THREE.Mesh(
+		toothGeometry, toothMaterial);
+
+	scene.add(toothMesh);
+}
+
+positionIncrement = 0;
+while (positionIncrement != 850)
+{
+	tooth = new THREE.Shape();
+
+	tooth.moveTo(-400 + positionIncrement, 290);
+	tooth.lineTo(-410 + positionIncrement, 340);
+	tooth.lineTo(-390 + positionIncrement, 340);
+	tooth.lineTo(-400 + positionIncrement, 290);
+
+	positionIncrement = positionIncrement + 50;
+
+	toothGeometry = new THREE.ShapeGeometry(tooth);
+	toothMaterial = new THREE.MeshBasicMaterial(
+		{color: 0x641e16});
+	toothMesh = new THREE.Mesh(
+		toothGeometry, toothMaterial);
+
+	scene.add(toothMesh);
+}
+
+// South teeth
+positionIncrement = 0;
 while (positionIncrement != 850)
 {
 	tooth = new THREE.Shape();
@@ -301,7 +344,7 @@ while (positionIncrement != 850)
 
 	toothGeometry = new THREE.ShapeGeometry(tooth);
 	toothMaterial = new THREE.MeshBasicMaterial(
-		{color: 0x96c8a2});
+		{color: 0x641e16});
 	toothMesh = new THREE.Mesh(
 		toothGeometry, toothMaterial);
 
@@ -322,12 +365,15 @@ while (positionIncrement != 850)
 
 	toothGeometry = new THREE.ShapeGeometry(tooth);
 	toothMaterial = new THREE.MeshBasicMaterial(
-		{color: 0x96c8a2});
+		{color: 0x641e16});
 	toothMesh = new THREE.Mesh(
 		toothGeometry, toothMaterial);
 
 	scene.add(toothMesh);
 }
+
+// Blur
+
 
 // Render
 renderer.render(scene, camera);

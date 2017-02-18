@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df730805-3add-455c-bea7-d26561db7676" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stainedGlass.js" afterPath="$PROJECT_DIR$/stainedGlass.js" />
     </list>
     <ignored path="stained-glass.iws" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="stainedGlass.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stainedGlass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1237">
-              <caret line="377" column="1" lean-forward="true" selection-start-line="377" selection-start-column="1" selection-end-line="377" selection-end-column="1" />
+            <state relative-caret-position="3445">
+              <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -63,6 +62,7 @@
       <find>hornSouthwest</find>
       <find>shapes.add</find>
       <find>true})</find>
+      <find>curved</find>
     </findStrings>
     <replaceStrings>
       <replace>tri</replace>
@@ -74,6 +74,7 @@
       <replace>shapes.push</replace>
       <replace>, transparent: true})</replace>
       <replace>true, opacity: 0.5})</replace>
+      <replace>curvedShape</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -246,12 +247,12 @@
       <workItem from="1487013572237" duration="3351000" />
       <workItem from="1487271012625" duration="9181000" />
       <workItem from="1487351737727" duration="10013000" />
-      <workItem from="1487385357333" duration="5787000" />
+      <workItem from="1487385357333" duration="13025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44758000" />
+    <option name="totallyTimeSpent" value="51996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -423,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1237">
-          <caret line="377" column="1" lean-forward="true" selection-start-line="377" selection-start-column="1" selection-end-line="377" selection-end-column="1" />
+        <state relative-caret-position="3445">
+          <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
           <folding />
         </state>
       </provider>

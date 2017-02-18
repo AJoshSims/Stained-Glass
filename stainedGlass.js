@@ -13,6 +13,8 @@ var renderer;
 
 init();
 
+var shapes = [];
+
 draw();
 
 render();
@@ -47,17 +49,17 @@ function draw()
 {
 	scene.add(drawBorder());
 
-	addShapesToScene(drawAllRects());
-	addShapesToScene(drawAllTris());
-	addShapesToScene(drawAllCircles());
-	addShapesToScene(drawAllCurvedShapes());
-}
+	shapes.push(drawAllRects());
+	shapes.push(drawAllTris());
+	shapes.push(drawAllCircles());
+	shapes.push(drawAllCurvedShapes());
 
-function addShapesToScene(shapes)
-{
-	while (shapes.length > 0)
+	for (var shapeIndex = 0; shapeIndex < shapes.length; ++shapeIndex)
 	{
-		scene.add(shapes.pop());
+		for (var thing = 0; thing < shapes[shapeIndex].length; ++thing)
+		{
+			scene.add(shapes[shapeIndex][thing]);
+		}
 	}
 }
 
@@ -246,7 +248,13 @@ function render()
 
 function onSlideChange()
 {
-	draw();
+	for (var shapeIndex = 0; shapeIndex < shapes.length; ++shapeIndex)
+	{
+		for (var thing = 0; thing < shapes[shapeIndex].length; ++thing)
+		{
+			shapes[shapeIndex][thing].material.opacity = slider.value;
+		}
+	}
 
 	render();
 }

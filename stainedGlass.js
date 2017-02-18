@@ -36,7 +36,8 @@ hole.lineTo(-canvasWidth + 30, canvasHeight - 30);
 stainedGlassFrame.holes.push(hole);
 
 var stainedGlassFrameGeometry = new THREE.ShapeGeometry(stainedGlassFrame);
-var stainedGlassFrameMaterial = new THREE.MeshBasicMaterial({color: 0x663300});
+var stainedGlassFrameMaterial = new THREE.MeshBasicMaterial(
+	{color: 0x663300, transparent: true, opacity: 0.5});
 var stainedGlassFrameMesh = new THREE.Mesh(
 	stainedGlassFrameGeometry, stainedGlassFrameMaterial);
 
@@ -56,7 +57,8 @@ rectangleCenter.lineTo(150, 30);
 rectangleCenter.lineTo(-150, 30);
 
 var rectangleCenterGeometry = new THREE.ShapeGeometry(rectangleCenter);
-var rectangleCenterMaterial = new THREE.MeshBasicMaterial({color: 0x614051});
+var rectangleCenterMaterial = new THREE.MeshBasicMaterial(
+	{color: 0x614051, transparent: true, opacity: 0.5});
 var rectangleCenterMesh = new THREE.Mesh(
 	rectangleCenterGeometry, rectangleCenterMaterial);
 
@@ -73,7 +75,7 @@ trianglePointyNorth.lineTo(0, 200);
 
 var trianglePointyNorthGeometry = new THREE.ShapeGeometry(trianglePointyNorth);
 var trianglePointyNorthMaterial = new THREE.MeshBasicMaterial(
-	{color: 0x96c8a2});
+	{color: 0x96c8a2, transparent: true, opacity: 0.5});
 var trianglePointyNorthMesh = new THREE.Mesh(
 	trianglePointyNorthGeometry, trianglePointyNorthMaterial);
 
@@ -90,7 +92,7 @@ trianglePointyWest.lineTo(-320, 0);
 
 var trianglePointyWestGeometry = new THREE.ShapeGeometry(trianglePointyWest);
 var trianglePointyWestMaterial = new THREE.MeshBasicMaterial(
-	{color: 0x96c8a2});
+	{color: 0x96c8a2, transparent: true, opacity: 0.5});
 var trianglePointyWestMesh = new THREE.Mesh(
 	trianglePointyWestGeometry, trianglePointyWestMaterial);
 
@@ -107,7 +109,7 @@ trianglePointySouth.lineTo(0, -200);
 
 var trianglePointySouthGeometry = new THREE.ShapeGeometry(trianglePointySouth);
 var trianglePointySouthMaterial = new THREE.MeshBasicMaterial(
-	{color: 0x96c8a2});
+	{color: 0x96c8a2, transparent: true, opacity: 0.5});
 var trianglePointySouthMesh = new THREE.Mesh(
 	trianglePointySouthGeometry, trianglePointySouthMaterial);
 
@@ -124,7 +126,7 @@ trianglePointyEast.lineTo(320, 0);
 
 var trianglePointyEastGeometry = new THREE.ShapeGeometry(trianglePointyEast);
 var trianglePointyEastMaterial = new THREE.MeshBasicMaterial(
-	{color: 0x96c8a2});
+	{color: 0x96c8a2, transparent: true, opacity: 0.5});
 var trianglePointyEastMesh = new THREE.Mesh(
 	trianglePointyEastGeometry, trianglePointyEastMaterial);
 
@@ -142,7 +144,7 @@ hornNorthwest.lineTo(-120, 250);
 
 var hornNorthwestGeometry = new THREE.ShapeGeometry(hornNorthwest);
 var hornNorthwestMaterial = new THREE.MeshBasicMaterial(
-	{color: 0xaaf000});
+	{color: 0xaaf000, transparent: true, opacity: 0.5});
 var hornNorthwestMesh = new THREE.Mesh(
 	hornNorthwestGeometry, hornNorthwestMaterial);
 
@@ -160,7 +162,7 @@ hornSouthwest.lineTo(-120, -250);
 
 var hornSouthwestGeometry = new THREE.ShapeGeometry(hornSouthwest);
 var hornSouthwestMaterial = new THREE.MeshBasicMaterial(
-	{color: 0xaaf000});
+	{color: 0xaaf000, transparent: true, opacity: 0.5});
 var hornSouthwestMesh = new THREE.Mesh(
 	hornSouthwestGeometry, hornSouthwestMaterial);
 
@@ -178,7 +180,7 @@ hornSoutheast.lineTo(120, -250);
 
 var hornSoutheastGeometry = new THREE.ShapeGeometry(hornSoutheast);
 var hornSoutheastMaterial = new THREE.MeshBasicMaterial(
-	{color: 0xaaf000});
+	{color: 0xaaf000, transparent: true, opacity: 0.5});
 var hornSoutheastMesh = new THREE.Mesh(
 	hornSoutheastGeometry, hornSoutheastMaterial);
 
@@ -196,7 +198,7 @@ hornNortheast.lineTo(120, 250);
 
 var hornNortheastGeometry = new THREE.ShapeGeometry(hornNortheast);
 var hornNortheastMaterial = new THREE.MeshBasicMaterial(
-	{color: 0xaaf000});
+	{color: 0xaaf000, transparent: true, opacity: 0.5});
 var hornNortheastMesh = new THREE.Mesh(
 	hornNortheastGeometry, hornNortheastMaterial);
 
@@ -209,7 +211,8 @@ var circleWestSegments = 128;
 
 var circleWestGeometry = new THREE.CircleGeometry(
 	circleWestRadius, circleWestSegments);
-var circleWestMaterial = new THREE.MeshBasicMaterial({color: 0xe6b0aa});
+var circleWestMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xe6b0aa, transparent: true, opacity: 0.5});
 var circleWestMesh = new THREE.Mesh(circleWestGeometry, circleWestMaterial);
 circleWestMesh.position.x = -350;
 circleWestMesh.position.y = 0;
@@ -223,7 +226,8 @@ var circleEastSegments = 128;
 
 var circleEastGeometry = new THREE.CircleGeometry(
 	circleEastRadius, circleEastSegments);
-var circleEastMaterial = new THREE.MeshBasicMaterial({color: 0xe6b0aa});
+var circleEastMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xe6b0aa, transparent: true, opacity: 0.5});
 var circleEastMesh = new THREE.Mesh(circleEastGeometry, circleEastMaterial);
 circleEastMesh.position.x = 350;
 circleEastMesh.position.y = 0;
@@ -241,7 +245,8 @@ rectangleNorthwest.lineTo(-50, 40);
 rectangleNorthwest.lineTo(-150, 40);
 
 var rectangleNorthwestGeometry = new THREE.ShapeGeometry(rectangleNorthwest);
-var rectangleNorthwestMaterial = new THREE.MeshBasicMaterial({color: 0xebdef0});
+var rectangleNorthwestMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xebdef0, transparent: true, opacity: 0.5});
 var rectangleNorthwestMesh = new THREE.Mesh(
 	rectangleNorthwestGeometry, rectangleNorthwestMaterial);
 
@@ -258,7 +263,8 @@ rectangleSouthwest.lineTo(-50, -40);
 rectangleSouthwest.lineTo(-150, -40);
 
 var rectangleSouthwestGeometry = new THREE.ShapeGeometry(rectangleSouthwest);
-var rectangleSouthwestMaterial = new THREE.MeshBasicMaterial({color: 0xebdef0});
+var rectangleSouthwestMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xebdef0, transparent: true, opacity: 0.5});
 var rectangleSouthwestMesh = new THREE.Mesh(
 	rectangleSouthwestGeometry, rectangleSouthwestMaterial);
 
@@ -275,7 +281,8 @@ rectangleSoutheast.lineTo(50, -40);
 rectangleSoutheast.lineTo(150, -40);
 
 var rectangleSoutheastGeometry = new THREE.ShapeGeometry(rectangleSoutheast);
-var rectangleSoutheastMaterial = new THREE.MeshBasicMaterial({color: 0xebdef0});
+var rectangleSoutheastMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xebdef0, transparent: true, opacity: 0.5});
 var rectangleSoutheastMesh = new THREE.Mesh(
 	rectangleSoutheastGeometry, rectangleSoutheastMaterial);
 
@@ -292,7 +299,8 @@ rectangleNortheast.lineTo(50, 40);
 rectangleNortheast.lineTo(150, 40);
 
 var rectangleNortheastGeometry = new THREE.ShapeGeometry(rectangleNortheast);
-var rectangleNortheastMaterial = new THREE.MeshBasicMaterial({color: 0xebdef0});
+var rectangleNortheastMaterial = new THREE.MeshBasicMaterial(
+	{color: 0xebdef0, transparent: true, opacity: 0.5});
 var rectangleNortheastMesh = new THREE.Mesh(
 	rectangleNortheastGeometry, rectangleNortheastMaterial);
 
@@ -318,7 +326,7 @@ while (positionIncrement != 850)
 
 	toothGeometry = new THREE.ShapeGeometry(tooth);
 	toothMaterial = new THREE.MeshBasicMaterial(
-		{color: 0x641e16});
+		{color: 0x641e16, transparent: true, opacity: 0.5});
 	toothMesh = new THREE.Mesh(
 		toothGeometry, toothMaterial);
 
@@ -340,10 +348,9 @@ while (positionIncrement != 850)
 
 	toothGeometry = new THREE.ShapeGeometry(tooth);
 	toothMaterial = new THREE.MeshBasicMaterial(
-		{color: 0x641e16});
+		{color: 0x641e16, transparent: true, opacity: 0.5});
 	toothMesh = new THREE.Mesh(
 		toothGeometry, toothMaterial);
-
 	scene.add(toothMesh);
 	shapes.push(toothMesh);
 }
@@ -351,9 +358,14 @@ while (positionIncrement != 850)
 // Render
 renderer.render(scene, camera);
 
-document.getElementById("slider1").addEventListener("change", onSlideChange);
+var slider = document.getElementById("slider1");
+slider.addEventListener("change", onSlideChange);
 
 function onSlideChange()
 {
-	
+	for (i = 0; i < shapes.length; ++i)
+	{
+		shapes[i].material.opacity = slider.value;
+	}
+	renderer.render(scene, camera);
 }

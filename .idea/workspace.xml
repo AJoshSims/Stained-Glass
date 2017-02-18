@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df730805-3add-455c-bea7-d26561db7676" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/documents/dat-pattern-vertices.pdf" afterPath="$PROJECT_DIR$/documents/dat-pattern-vertices.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stainedGlass.js" afterPath="$PROJECT_DIR$/stainedGlass.js" />
     </list>
     <ignored path="stained-glass.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="stainedGlass.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stainedGlass.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
+            <state relative-caret-position="336">
               <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
@@ -38,8 +40,8 @@
       <file leaf-file-name="stainedGlass.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stainedGlass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1093">
-              <caret line="357" column="4" lean-forward="false" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
+            <state relative-caret-position="1237">
+              <caret line="367" column="49" lean-forward="false" selection-start-line="367" selection-start-column="49" selection-end-line="367" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -61,6 +63,7 @@
       <find>rectangleCenter</find>
       <find>hornSouthwest</find>
       <find>shapes.add</find>
+      <find>true})</find>
     </findStrings>
     <replaceStrings>
       <replace>tri</replace>
@@ -70,6 +73,8 @@
       <replace>rectangleNorthwest</replace>
       <replace>blurWest</replace>
       <replace>shapes.push</replace>
+      <replace>, transparent: true})</replace>
+      <replace>true, opacity: 0.5})</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -123,6 +128,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -137,8 +144,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,12 +246,13 @@
       <workItem from="1486995419157" duration="1699000" />
       <workItem from="1487013572237" duration="3351000" />
       <workItem from="1487271012625" duration="9181000" />
-      <workItem from="1487351737727" duration="9985000" />
+      <workItem from="1487351737727" duration="10013000" />
+      <workItem from="1487385357333" duration="1747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38943000" />
+    <option name="totallyTimeSpent" value="40718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -289,6 +295,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/stainedGlass.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stainedGlass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -394,7 +416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="336">
           <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
           <folding />
         </state>
@@ -402,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="357" column="4" lean-forward="false" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
+        <state relative-caret-position="1237">
+          <caret line="367" column="49" lean-forward="false" selection-start-line="367" selection-start-column="49" selection-end-line="367" selection-end-column="49" />
           <folding />
         </state>
       </provider>

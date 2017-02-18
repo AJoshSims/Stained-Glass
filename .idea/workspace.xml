@@ -38,8 +38,8 @@
       <file leaf-file-name="stainedGlass.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stainedGlass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3445">
-              <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+            <state relative-caret-position="624">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -247,12 +247,12 @@
       <workItem from="1487013572237" duration="3351000" />
       <workItem from="1487271012625" duration="9181000" />
       <workItem from="1487351737727" duration="10013000" />
-      <workItem from="1487385357333" duration="13025000" />
+      <workItem from="1487385357333" duration="13610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51996000" />
+    <option name="totallyTimeSpent" value="52581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -424,8 +424,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stainedGlass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3445">
-          <caret line="209" column="0" lean-forward="true" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        <state relative-caret-position="624">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>

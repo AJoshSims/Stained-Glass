@@ -142,6 +142,8 @@ function drawAllTris()
 			-410 + positionIncrement, -350, 
 			-390 + positionIncrement, -350, 
 			0x641e16));
+
+		positionIncrement += 50;
 	}
 	
 	positionIncrement = 0;
@@ -152,6 +154,8 @@ function drawAllTris()
 			-410 + positionIncrement, -340,
 			-390 + positionIncrement, -340,
 			0x641e16));
+
+		positionIncrement += 50;
 	}
 	
 	return tris;

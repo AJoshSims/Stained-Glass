@@ -1,33 +1,85 @@
+/**
+ * Creates an interactive stained glass window. The opacity of the shapes
+ * that appear in the stained glass can be decreased by moving the slider to
+ * the left and increased by moving the slider to the right.
+ *
+ * <p>Should be executed in the Google Chrome web browser.
+ *
+ * @author Joshua Sims
+ *
+ * @version 19 February 2017
+ */
+
+/**
+ * The width of the canvas.
+ */
 var canvasWidth;
+
+/**
+ * The height of the canvas.
+ */
 var canvasHeight;
 
+/**
+ * The scene in which the stained glass window appears.
+ */
 var scene;
 
+/**
+ * The view length of the camera.
+ */
 var viewLength;
+
+/**
+ * The aspect ratio.
+ */
 var aspRat;
+
+/**
+ * The camera that is directed at the stained glass window.
+ */
 var camera;
 
+/**
+ * The interactive slider widget with which the user may change the opacity
+ * of the shapes that appear in the stained glass.
+ */
 var slider;
 
+/**
+ * Renders the scene.
+ */
 var renderer;
+
+/**
+ * The shapes that appear in the stained glass.
+ */
+var shapes = [];
 
 init();
 
-var shapes = [];
-
 draw();
 
-render();
+renderScene();
 
+/**
+ * Sets the window color, the canvas width and height, creates a new scene and
+ * orthographic camera, and adds an event handler that listens for the alpha
+ * change.
+ */
 function init()
 {
+	// Sets color of window to black
 	window.color = new THREE.Color(0.0, 0.0, 0.0);
 
+	// Establishes canvas dimensions
 	canvasWidth = window.innerWidth - 50;
 	canvasHeight = window.innerHeight - 50;
 
+	// Creates scene
 	scene = new THREE.Scene();
 
+	// Sets up camera
 	viewLength = 1000;
 	aspRat = canvasWidth/canvasHeight;
 	camera = new THREE.OrthographicCamera(
@@ -37,14 +89,20 @@ function init()
 		-viewLength/2,
 		-1000, 1000);
 
+	// Sets up slider
 	slider = document.getElementById("slider1");
 	slider.addEventListener("change", onSlideChange);
 
+	// Sets up slider
 	renderer = new THREE.WebGLRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	document.body.appendChild(renderer.domElement);
 }
 
+/**
+ * Creates the shapes that constitute the stained glass pattern and adds them
+ * to the scene.
+ */
 function draw()
 {
 	scene.add(drawBorder());
@@ -54,15 +112,20 @@ function draw()
 	shapes.push(drawAllCircles());
 	shapes.push(drawAllCurvedShapes());
 
-	for (var shapeIndex = 0; shapeIndex < shapes.length; ++shapeIndex)
+	for (var shapesSubset = 0; shapesSubset < shapes.length; ++shapesSubset)
 	{
-		for (var thing = 0; thing < shapes[shapeIndex].length; ++thing)
+		for (var shape = 0; shape < shapes[shapesSubset].length; ++shape)
 		{
-			scene.add(shapes[shapeIndex][thing]);
+			scene.add(shapes[shapesSubset][shape]);
 		}
 	}
 }
 
+/**
+ * Creates and returns the mesh of the stained glass border.
+ *
+ * @return The mesh of the stained glass border
+ */
 function drawBorder()
 {
 	var border = new THREE.Shape();
@@ -90,32 +153,53 @@ function drawBorder()
 	return borderMesh;
 }
 
+/**
+ * Creates and returns the meshes of the rectangles that appear in the 
+ * stained glass.
+ *
+ * @return The meshes of the rectangles that appear in the stained glass
+ */
 function drawAllRects()
 {
 	var rects = [];
 	
-	rects.push(rectThing(-150, 30, -150, -30, 150, -30, 150, 30, 0x614051));
-	rects.push(rectThing(-150, 40, -150, 45, -50, 45, -50, 40, 0xebdef0));
-	rects.push(rectThing(-150, -40, -150, -45, -50, -45, -50, -40, 0xebdef0));
-	rects.push(rectThing(150, -40, 150, -45, 50, -45, 50, -40, 0xebdef0));
-	rects.push(rectThing(150, 40, 150, 45, 50, 45, 50, 40, 0xebdef0));
+	rects.push(createRect(-150, 30, -150, -30, 150, -30, 150, 30, 0x614051));
+	rects.push(createRect(-150, 40, -150, 45, -50, 45, -50, 40, 0xebdef0));
+	rects.push(createRect(-150, -40, -150, -45, -50, -45, -50, -40, 0xebdef0));
+	rects.push(createRect(150, -40, 150, -45, 50, -45, 50, -40, 0xebdef0));
+	rects.push(createRect(150, 40, 150, 45, 50, 45, 50, 40, 0xebdef0));
 	
 	return rects;
 }
 
-function rectThing(
-	topLeftX, topLeftY,
-	bottomLeftX, bottomLeftY,
-	bottomRightX, bottomRightY,
-	topRightX, topRightY, 
+/**
+ * Creates and returns the mesh of the specified rectangle.
+ *
+ * @param firstX - The x coordinate of the first vertex
+ * @param firstY - The y coordinate of the first vertex
+ * @param secondX - The x coordinate of the second vertex
+ * @param secondY - The y coordinate of the second vertex
+ * @param thirdX - The x coordinate of the third vertex
+ * @param thirdY - The y coordinate of the third vertex
+ * @param fourthX - The x coordinate of the fourth vertex
+ * @param fourthY - The y coordinate of the fourth vertex
+ * @param color - The color of the rectangle
+ * 
+ * @return The mesh of the specified rectangle
+ */
+function createRect(
+	firstX, firstY,
+	secondX, secondY,
+	bottomRightX, thirdY,
+	fourthX, fourthY,
 	color)
 {
 	var rect = new THREE.Shape();
-	rect.moveTo(topLeftX, topLeftY);
-	rect.lineTo(bottomLeftX, bottomLeftY);
-	rect.lineTo(bottomRightX, bottomRightY);
-	rect.lineTo(topRightX, topRightY);
-	rect.lineTo(topLeftX, topLeftY);
+	rect.moveTo(firstX, firstY);
+	rect.lineTo(secondX, secondY);
+	rect.lineTo(bottomRightX, thirdY);
+	rect.lineTo(fourthX, fourthY);
+	rect.lineTo(firstX, firstY);
 
 	var rectGeometry = new THREE.ShapeGeometry(rect);
 	var rectMaterial = new THREE.MeshBasicMaterial(
@@ -127,19 +211,25 @@ function rectThing(
 	return rectMesh;
 }
 
+/**
+ * Creates and returns the meshes of the triangles that appear in the
+ * stained glass.
+ *
+ * @return The meshes of the triangles that appear in the stained glass
+ */
 function drawAllTris()
 {
 	var tris = [];
 	
-	tris.push(triThing(0, 200, 25, 50, -25, 50, 0x96c8a2));
-	tris.push(triThing(-320, 0, -170, -25, -170, 25, 0x96c8a2));
-	tris.push(triThing(0, -200, -25, -50, 25, -50, 0x96c8a2));
-	tris.push(triThing(320, 0, 170, 25, 170, -25, 0x96c8a2));
+	tris.push(createTri(0, 200, 25, 50, -25, 50, 0x96c8a2));
+	tris.push(createTri(-320, 0, -170, -25, -170, 25, 0x96c8a2));
+	tris.push(createTri(0, -200, -25, -50, 25, -50, 0x96c8a2));
+	tris.push(createTri(320, 0, 170, 25, 170, -25, 0x96c8a2));
 
 	var positionIncrement = 0;
 	while (positionIncrement != 850)
 	{
-		tris.push(triThing(
+		tris.push(createTri(
 			-400 + positionIncrement, -400, 
 			-410 + positionIncrement, -350, 
 			-390 + positionIncrement, -350, 
@@ -151,7 +241,7 @@ function drawAllTris()
 	positionIncrement = 0;
 	while (positionIncrement != 850)
 	{
-		tris.push(triThing(
+		tris.push(createTri(
 			-400 + positionIncrement, -290,
 			-410 + positionIncrement, -340,
 			-390 + positionIncrement, -340,
@@ -163,7 +253,20 @@ function drawAllTris()
 	return tris;
 }
 
-function triThing(
+/**
+ * Creates and returns the mesh of the specified triangle.
+ *
+ * @param firstX - The x coordinate of the first vertex
+ * @param firstY - The y coordinate of the first vertex
+ * @param secondX - The x coordinate of the second vertex
+ * @param secondY - The y coordinate of the second vertex
+ * @param thirdX - The x coordinate of the third vertex
+ * @param thirdY - The y coordinate of the third vertex
+ * @param color - The color of the triangle
+ *
+ * @return The mesh of the specified triangle
+ */
+function createTri(
 	firstX, firstY,
 	secondX, secondY,
 	thirdX, thirdY,
@@ -186,17 +289,35 @@ function triThing(
 	return triMesh;
 }
 
+/**
+ * Creates and returns the meshes of the circles that appear in the
+ * stained glass.
+ *
+ * @return The meshes of the circles that appear in the stained glass
+ */
 function drawAllCircles()
 {
 	var circles = [];
 
-	circles.push(circleThing(15, 128, -350, 0, 0xe6b0aa));
-	circles.push(circleThing(15, 128, 350, 0, 0xe6b0aa));
+	circles.push(createCircle(15, 128, -350, 0, 0xe6b0aa));
+	circles.push(createCircle(15, 128, 350, 0, 0xe6b0aa));
 
 	return circles;
 }
 
-function circleThing(radius, segments, x, y, color)
+/**
+ * Creates and returns the mesh of the specified circle.
+ * 
+ * @param radius - The radius of the circle
+ * @param segments - The number of line segments which together form the
+ *     circumference
+ * @param x - The x coordinate of the center of the circle
+ * @param y - The y coordinate of the center of the circle
+ * @param color - The color of the circle
+ *
+ * @return The mesh of the specified circle
+ */
+function createCircle(radius, segments, x, y, color)
 {
 	var circleGeometry = new THREE.CircleGeometry(
 		radius, segments);
@@ -210,19 +331,43 @@ function circleThing(radius, segments, x, y, color)
 	return circleMesh;
 }
 
+/**
+ * Creates and returns the meshes of the curved shapes (other than circles) 
+ * that appear in the stained glass.
+ *
+ * @return The meshes of the curved shapes (other than circles) that appear in 
+ *     the stained glass
+ */
 function drawAllCurvedShapes()
 {
 	var curvedShapes = [];
 
-	curvedShapes.push(curveThing(-120, 250, -170, 50, -120, 50, 0xaaf000));
-	curvedShapes.push(curveThing(-120, -250, -170, -50, -120, -50, 0xaaf000));
-	curvedShapes.push(curveThing(120, -250, 170, -50, 120, -50, 0xaaf000));
-	curvedShapes.push(curveThing(120, 250, 170, 50, 120, 50, 0xaaf000));
+	curvedShapes.push(createCurvedShape(-120, 250, -170, 50, -120, 50, 0xaaf000));
+	curvedShapes.push(createCurvedShape(-120, -250, -170, -50, -120, -50, 0xaaf000));
+	curvedShapes.push(createCurvedShape(120, -250, 170, -50, 120, -50, 0xaaf000));
+	curvedShapes.push(createCurvedShape(120, 250, 170, 50, 120, 50, 0xaaf000));
 
 	return curvedShapes;
 }
 
-function curveThing(firstX, firstY, secondX, secondY, thirdX, thirdY, color)
+/**
+ * Creates and returns the mesh of the specified curved shape.
+ *
+ * @param firstX - The x coordinate of the first vertex
+ * @param firstY - The y coordinate of the first vertex
+ * @param secondX - The x coordinate of the second vertex
+ * @param secondY - The y coordinate of the second vertex
+ * @param thirdX - The x coordinate of the third vertex
+ * @param thirdY - The y coordinate of the third vertex
+ * @param color - The color of the curved shape
+ *
+ * @return The mesh of the specified curved shape
+ */
+function createCurvedShape(
+	firstX, firstY,
+	secondX, secondY,
+	thirdX, thirdY,
+	color)
 {
 	var curvedShape = new THREE.Shape();
 	curvedShape.moveTo(firstX, firstY);
@@ -241,20 +386,29 @@ function curveThing(firstX, firstY, secondX, secondY, thirdX, thirdY, color)
 	return curvedShapeMesh;
 }
 
-function render()
+/**
+ * Renders the scene.
+ */
+function renderScene()
 {
 	renderer.render(scene, camera);
 }
 
+/**
+ * Decreases the opacity of each of the stained glass shapes when the slider
+ * is moved to the left and increases the opacity of each of the stained
+ * glass shapes when the slider is moved to the right. Then renders the scene
+ * again.
+ */
 function onSlideChange()
 {
-	for (var shapeIndex = 0; shapeIndex < shapes.length; ++shapeIndex)
+	for (var shapesSubset = 0; shapesSubset < shapes.length; ++shapesSubset)
 	{
-		for (var thing = 0; thing < shapes[shapeIndex].length; ++thing)
+		for (var shape = 0; shape < shapes[shapesSubset].length; ++shape)
 		{
-			shapes[shapeIndex][thing].material.opacity = slider.value;
+			shapes[shapesSubset][shape].material.opacity = slider.value;
 		}
 	}
 
-	render();
+	renderScene();
 }
